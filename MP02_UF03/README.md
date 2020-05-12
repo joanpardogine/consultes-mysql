@@ -1,6 +1,7 @@
 # Activitat 1: Usuaris i privilegis en MySQL.
 
-`[MP02_UF03_Act_01_UsuPri_MySQL.pdf](https://drive.google.com/file/d/1E6k5Jr9fqZdxhvm0vLyH7LPN5QzDuFER/view)`
+`[MP02_UF03_Act_01_UsuPri_MySQL.pdf](./docs/MP02_UF03_Act_01_UsuPri_MySQL.pdf)`
+
 1. Crea un usuari nou amb el teu cognomnom en el servidor local.
 ...
 Consta de 13 apartats
