@@ -19,4 +19,4 @@ Insertis, com a mínim **tres** registres, a **totes** i cadascuna de les **taul
 | SOCIS               |
 +---------------------+
 ~~~~
-La informació de cada pel·lícula cal que la obtingeu de la web [IMdb.com](https://www.imdb.com/).
+La informació de cada pel·lícula cal que la obtingeu de la web [IMDb.com](https://www.imdb.com/). ![logoIMDb](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/245px-IMDB_Logo_2016.svg.png)
