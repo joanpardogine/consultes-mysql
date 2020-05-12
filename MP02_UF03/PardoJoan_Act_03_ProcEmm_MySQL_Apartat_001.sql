@@ -1,6 +1,6 @@
 /*
 ** Sobre la base de dades videoclub.
-** Actiitat 1: Dissenya un procediment que rebi un
+** Activitat 1: Dissenya un procediment que rebi un
 ** codi de pel·lícula i mostri per pantalla el nom
 ** de la pel·lícula i els actors/actrius que hi
 ** actuen, juntament amb el paper que interpreten.
