@@ -3,7 +3,7 @@
 
 
 **1.** Emprant la base de dades videoclub, cal que:
-Insertis, com a mínim **tres** registres, a **totes** i cadascuna de les **taules** que existeixen a la base de dades de `**videoclub**`.
+Insertis, com a mínim **tres** registres, a **totes** i cadascuna de les **taules** que existeixen a la base de dades de **`videoclub`**.
 
 
 ~~~~sql
