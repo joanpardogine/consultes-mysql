@@ -1,1 +1,1 @@
-#Enunciats per practicar amb els INSERT's
+# Enunciats per practicar amb els INSERT's
