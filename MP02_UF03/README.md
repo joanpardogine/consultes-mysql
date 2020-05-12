@@ -4,6 +4,9 @@
 
 Emprant la base de dades videoclub, cal que:
 Insertis, com a mínim tres registres, a totes i cadascuna de les taules que existeixen a la base de dades de videoclub.
+
+
+~~~~sql
 +---------------------+
 | Taules a videoclub  |
 +---------------------+
@@ -15,4 +18,5 @@ Insertis, com a mínim tres registres, a totes i cadascuna de les taules que exi
 | PRESTECS            |
 | SOCIS               |
 +---------------------+
+~~~~
 La informació de cada pel·lícula cal que la obtingeu de la web IMDb.com
