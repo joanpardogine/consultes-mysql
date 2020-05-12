@@ -2,7 +2,7 @@
 ![MER_Videoclub](./imatges/MER_Videoclub.png)
 
 
-Emprant la base de dades videoclub, cal que:
+1 Emprant la base de dades videoclub, cal que:
 Insertis, com a mínim tres registres, a totes i cadascuna de les taules que existeixen a la base de dades de videoclub.
 
 
