@@ -1,3 +1,9 @@
+# Activitat 1: Usuaris i privilegis en MySQL.
+# Activitat 2: Treballadors amb fills.
+# Activitat 3: Activitats de procediments emmagatzemats 
+# Activitat 4: Activitats de SP amb cursors
+
+
 # Enunciats per practicar amb els `INSERT`'s
 ![MER_Videoclub](./imatges/MER_Videoclub.png)
 
