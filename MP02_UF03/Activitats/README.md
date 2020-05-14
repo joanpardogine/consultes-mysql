@@ -1,3 +1,3 @@
 # Fitxers de teoria
 
-[here](myLib/README.md)
+[Apunts_MP02_UF03_Llenguatges_DCL_01_Gestio_Usuaris.pdf](Apunts_MP02_UF03_Llenguatges_DCL_01_Gestio_Usuaris.pdf)
