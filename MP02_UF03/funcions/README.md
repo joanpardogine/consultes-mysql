@@ -42,7 +42,7 @@ USE videoclub //
 
 DROP FUNCTION IF EXISTS f_major //
 
-CREATE FUNCTION f_major(IN inValor1 INT, IN inValor2 INT) RETURNS INT
+CREATE FUNCTION f_major(inValor1 INT, inValor2 INT) RETURNS INT
     BEGIN
         DECLARE outValorATornar INT;
         IF inValor1 > inValor2 THEN
@@ -67,16 +67,144 @@ Al final de tot està la instrucció **`RETURN`** que retorna el contingut de la
 Vegem a continuació una aplicació de la funció **`f_major`**.
 
 ```sql
-mysql> select f_major(34, 27)
-f_major(34, 27)
-34
+mysql> select f_major(34, 27);
++-----------------+
+| f_major(34, 27) |
++-----------------+
+|              34 |
++-----------------+
 ```
 
 Aplicat a dues columnes d'una consulta:
 
 ```sql
-select ID_ALUMNO,
-ID_CURSO,
-f_major(ID_ALUMNO, ID_CURSO) as MAJOR
- from ALUMNOS_CURSOS
+
+mysql> SELECT id_peli AS "Codi Peli",
+    ->        id_actor  AS "Codi Actor",
+    ->        f_major(id_peli, id_actor) AS "el més gran"
+    -> FROM ACTORS_PELLICULES;
++-----------+------------+--------------+
+| Codi Peli | Codi Actor | el més gran  |
++-----------+------------+--------------+
+|         1 |          1 |            1 |
+|        10 |          1 |           10 |
+...
+|        13 |         20 |           20 |
+|        14 |         20 |           20 |
+|        15 |         20 |           20 |
++-----------+------------+--------------+
+46 rows in set (0.00 sec)
+
  ```
+
+ ## Funció amb accés a dades **`f_sumaSous`**
+
+La següent funció d'exemple MySQL calcula la suma de salaris de la taula **`TREBALLADORS`**, té un paràmetre d'entrada per a indicar-li el departament dels treballadors que s'han de considerar per realitzar el càlcul. Però si no s'especifica el departament, o cosa que és el mateix, la invoquem passant-li un valor nul, calcula la suma de salaris de tota la taula.
+
+```sql
+
+DELIMITER //
+
+USE empresa //
+
+DROP FUNCTION IF EXISTS f_sumaSous //
+
+CREATE FUNCTION f_sumaSous(pi_responsable  smallint)
+    RETURNS float
+    BEGIN
+        DECLARE pa_sumaSous float;
+
+        SELECT sum(SOU_TREB)
+            INTO pa_sumaSous 
+        FROM TREBALLADORS
+        WHERE CAP_TREB=pi_responsable
+                OR pi_responsable IS NULL;  -- OR ISNULL(pi_responsable);
+        
+        RETURN pa_sumaSous;
+    END //
+
+DELIMITER ;
+
+mysql> SELECT f_sumaSous(7698);
++------------------+
+| f_sumaSous(7698) |
++------------------+
+| 5117.60986328125 |
++------------------+
+
+mysql> SELECT sum(SOU_TREB)
+    -> FROM TREBALLADORS
+    -> WHERE CAP_TREB = 7698;
++---------------+
+| sum(SOU_TREB) |
++---------------+
+|       5117.61 |
++---------------+
+
+
+mysql> SELECT f_sumaSous(NULL);
++------------------+
+| f_sumaSous(NULL) |
++------------------+
+|    22677.6796875 |
++------------------+
+
+mysql> SELECT sum(SOU_TREB)
+    -> FROM TREBALLADORS;
++---------------+
+| sum(SOU_TREB) |
++---------------+
+|      22677.68 |
++---------------+
+```
+## Analitzant les parts del codi de la funció **`f_sumaSous`**.
+Fixeu-vos com en la consulta que conté la funció apareix una clàusula que ja s'havia tractat amb anterioritat, la clàusula **`INTO`**. Com amb els Storage Procedures, té el propòsit d'assignar els valors que retorna la consulta a variables per al seu tractament o ús. En aquest cas la suma de salaris que retorna la consulta s'assigna a la variable **`pa_sumaSous`**, que s'usa com a valor de retorn de la funció. Si en la clàusula **`SELECT`** apareixen més columnes o camps, haurà d'especificar en la clàusula **`INTO`** una variable per a cada columna que indiqui en la clàusula **`SELECT`**, separant una variable d'una altra per comes. Aquestes variables han de ser del mateix tipus que el valor que retorna la consulta en la seva columna corresponent. Si aquestes consultes retornen més d'una sola fila de resultat, si retornen dos o més es produeix un error en temps d'execució, atès que no és possible assignar a una variable els valors de diverses files de resultat. En aquest cas caldria fer servir un cursor de MySQL.
+Provem el bon funcionament de la funció **`f_sumaSous`** mitjançant la següent consulta:
+
+```sql
+
+
+
+mysql> sELECT DISTINCT CAP_TREB  FROM TREBALLADORS;
++----------+
+| CAP_TREB |
++----------+
+|     NULL |
+|     7566 |
+|     7698 |
+|     7782 |
+|     7788 |
+|     7839 |
+|     7902 |
++----------+
+
+
+SELECT 'Codi 7566' Responsble, f_sumaSous(7566) AS "Total Sous"
+    UNION SELECT 'Codi 7698', f_sumaSous(7698)
+    UNION SELECT 'Codi 7782', f_sumaSous(7782)
+    UNION SELECT 'Codi 7788', f_sumaSous(7788)
+    UNION SELECT 'Codi 7782', f_sumaSous(7782)
+    UNION SELECT 'Codi 7839', f_sumaSous(7839)
+    UNION SELECT 'Codi 7902', f_sumaSous(7902)
+    UNION SELECT 'Tots', f_sumaSous(NULL);
+
+mysql> SELECT 'Codi 7566' Responsble, f_sumaSous(7566) AS "Total Sous"
+    ->     UNION SELECT 'Codi 7698', f_sumaSous(7698)
+    ->     UNION SELECT 'Codi 7782', f_sumaSous(7782)
+    ->     UNION SELECT 'Codi 7788', f_sumaSous(7788)
+    ->     UNION SELECT 'Codi 7782', f_sumaSous(7782)
+    ->     UNION SELECT 'Codi 7839', f_sumaSous(7839)
+    ->     UNION SELECT 'Codi 7902', f_sumaSous(7902)
+    ->     UNION SELECT 'Tots', f_sumaSous(NULL);
++------------+------------+
+| Responsble | Total Sous |
++------------+------------+
+| Codi 7566  |     4687.9 |
+| Codi 7698  |    5117.61 |
+| Codi 7782  |    1015.71 |
+| Codi 7788  |     859.45 |
+| Codi 7839  |    6465.38 |
+| Codi 7902  |     625.05 |
+| Tots       |    22677.7 |
++------------+------------+
+```
