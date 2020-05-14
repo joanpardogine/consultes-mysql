@@ -1,7 +1,5 @@
 # Activitat 1: Usuaris i privilegis en MySQL.
 
-Roses are \textcolor{red}{red}, violets are \textcolor{blue}{blue}.
-
 [MP02_UF03_Act_01_UsuPri_MySQL.pdf](./documents/MP02_UF03_Act_01_UsuPri_MySQL.pdf)
 
 &nbsp;&nbsp;**1.** Crea un usuari nou amb el teu **`cognomnom`** en el servidor local.
