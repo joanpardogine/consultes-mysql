@@ -13,16 +13,15 @@ Consta de 13 apartats
 Creeu un fitxer sql amb el resultat de cada apartat. Per exemple, el nom del fitxer que
 conté la solució a l'apartat 1 serà:
 
-CognomNom_Act_01_UsuPri_MySQL_Apartat_001.sql.
-I el lliurament, serà un fitxer comprimit (zip, o rar) que contindrà tots els fitxers sql de
+`**CognomNom_Act_01_UsuPri_MySQL_Apartat_001.sql**`
+I el lliurament, serà un fitxer comprimit (`zip`, o `rar`) que contindrà tots els fitxers sql de
 cadascun dels apartats.
 
-CognomNom_Act_01_UsuPri_MySQL.zip.
+`**CognomNom_Act_01_UsuPri_MySQL.zip**`
 
 Recordeu que la correcció la faré pujant el fitxer que m'enviïs i executant-lo directament
 al meu servidor. Per tant, sabreu si em funcionarà o no, si executant-lo vosaltres en el
 vostre servidor funciona o no.
-
 
 # Activitat 2: Treballadors amb fills.
 # Activitat 3: Activitats de procediments emmagatzemats 
