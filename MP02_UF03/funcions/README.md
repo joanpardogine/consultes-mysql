@@ -1,14 +1,45 @@
 # Funcions MYSQL
-Les funcions programades per l'usuari es comporten igual que les funcions natives dels SGBD. Poden veure's d'igual manera com a caixes negres a les quals se'ls pot passar de zero a diversos paràmetres d'entrada, i retornen un únic valor de sortida. Per a il·lustrar com programar una funció senzilla, considerarem que necessitem unificar en una tercera columna, dues columnes numèriques que retorna una consulta SQL, de manera que la nova columna contingui el valor major d'entre les altres dues columnes. La funció ha de ser genèrica, és a dir, per a dos valors donats ha de determinar el major i retornar-ho com a resultat de l'operació.
+Les funcions programades per l'usuari es comporten igual que les funcions natives dels SGBD. Poden veure's d'igual manera com a caixes negres a les quals se'ls pot passar de zero a diversos paràmetres d'entrada, i retornen un únic valor de sortida. Per a il·lustrar com programar una funció senzilla, considerarem que volem tornar la cadena que rebem com a paràmetre, afegida a la paraula "hola".
+
+```sql
+
+DELIMITER //
+
+USE videoclub //
+
+DROP FUNCTION IF EXISTS f_HolaMon //
+
+CREATE FUNCTION f_HolaMon(cadena VARCHAR(20)) RETURNS VARCHAR(50)
+        RETURN CONCAT('Hola, ',cadena,'!'); //
+
+DELIMITER ;
+
+
+mysql> SELECT f_HolaMon("món");
++--------------------+
+| f_HolaMon("món")   |
++--------------------+
+| Hola, món!         |
++--------------------+
+1 row in set (0.00 sec)
+
+
+```
+
+
+
+
+
+considerarem que necessitem unificar en una tercera columna, dues columnes numèriques que retorna una consulta SQL, de manera que la nova columna contingui el valor major d'entre les altres dues columnes. La funció ha de ser genèrica, és a dir, per a dos valors donats ha de determinar el major i retornar-ho com a resultat de l'operació.
 En construir la funció s'han usat majúscules per a diferenciar els noms que tria el programador de les instruccions i per tant paraules reservades del llenguatge.
 
 ```sql
 
 DELIMITER //
 
-use videoclub //
+USE videoclub //
 
-DROP FUNCTION IF EXISTS f_major
+DROP FUNCTION IF EXISTS f_major //
 
 CREATE FUNCTION f_major(IN inValor1 INT, IN inValor2 INT) RETURNS INT
     BEGIN
@@ -19,7 +50,10 @@ CREATE FUNCTION f_major(IN inValor1 INT, IN inValor2 INT) RETURNS INT
             SET outValorATornar = inValor2;
         END IF;
         RETURN outValorATornar;
-END;
+    END //
+
+DELIMITER ;
+
 ```
 
 ## Analitzant les parts del codi de la funció **`f_major`**.
