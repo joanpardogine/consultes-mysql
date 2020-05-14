@@ -23,7 +23,7 @@
 &nbsp;&nbsp;**5.** Crea un usuari nou amb el teu **`cognomnom_admin`**.
 
 &nbsp;&nbsp;**6.** Proporciona tots els privilegis per la BD **`videoclub`** a l’usuari creat
-en l'**`apartart 5`**`.
+en l'**`apartart 5`**.
 
 &nbsp;&nbsp;**7.** Esborra el privilegi de crear taules a l’usuari creat en l'**`apartart 5`**.
 
