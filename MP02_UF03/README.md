@@ -39,21 +39,20 @@ en l'**`apartart 5`**`.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**b.** En cas negatiu, per què?
 
-**12.** Llistat tots els empleats de la BD **`empresa`**.
+&nbsp;&nbsp;**12.** Llistat tots els empleats de la BD **`empresa`**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**a.** Pots fer-ho?
 
 &nbsp;&nbsp;&nbsp;&nbsp;**b.** En cas negatiu, per què?
 
-**13.** Esborra l’usuari creat en l'**`apartart 5`**.
+&nbsp;&nbsp;**13.** Esborra l’usuari creat en l'**`apartart 5`**.
 
 
 &nbsp;&nbsp;Creeu un fitxer sql amb el resultat de cada apartat. Per exemple, el nom del fitxer que
 conté la solució a l'**`apartart 1`** serà:
 
 &nbsp;&nbsp;**`CognomNom_Act_01_UsuPri_MySQL_Apartat_001.sql`**
-&nbsp;&nbsp;I el lliurament, serà un fitxer comprimit (**`zip`**, o **`rar`**) que contindrà tots els fitxers sql de
-cadascun dels apartats.
+&nbsp;&nbsp;I el lliurament, serà un fitxer comprimit (**`zip`**, o **`rar`**) que contindrà tots els fitxers sql de cadascun dels apartats.
 
 &nbsp;&nbsp;**`CognomNom_Act_01_UsuPri_MySQL.zip`**
 
