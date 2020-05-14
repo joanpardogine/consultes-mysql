@@ -4,11 +4,44 @@
 
 **1.** Crea un usuari nou amb el teu **`cognomnom`** en el servidor local.
 
-...
+**2.** Proporciona els permisos per la BD videoclub al nou usuari:
 
-Consta de 13 apartats
+&nbsp;&nbsp;**a.** Llistar dades.
 
-...
+&nbsp;&nbsp;**b.** Inserir dades.
+
+&nbsp;&nbsp;**c.** Modificar dades.
+
+&nbsp;&nbsp;**d.** Esborrar dades.
+
+&nbsp;&nbsp;**e.** Executar funcions.
+
+**3.** Aplica els privilegis.
+
+**4.** Mostra els privilegis del nou usuari.
+
+**5.** Crea un usuari nou amb el teu cognomnom_admin.
+
+**6.** Proporciona tots els privilegis per la BD videoclub a l’usuari creat
+en l'apartart 5.
+
+**7.** Esborra el privilegi de crear taules a l’usuari creat en l'apartart 5.
+
+**8.** Aplica els privilegis.
+
+**9.** Mostra els privilegis de l’usuari creat en l'apartart 5.
+
+**10.** Surt del MySQL i accedeix amb l’usuari creat en l'apartart 1.
+
+**11.** Llista totes les pel·lícules.
+a. Pots fer-ho?
+b. En cas negatiu, per què?
+**12.** Llistat tots els empleats de la BD empresa.
+a. Pots fer-ho?
+b. En cas negatiu, per què?
+
+**13.** Esborra l’usuari creat en l'apartart 5.
+
 
 Creeu un fitxer sql amb el resultat de cada apartat. Per exemple, el nom del fitxer que
 conté la solució a l'apartat 1 serà:
