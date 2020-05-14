@@ -1,3 +1,5 @@
+file:///D:/Dades/Ginebro/2019_2020/SharedAlumnes/01_DAW_MP02_Bases_De_Dades/SqlFacil_llibre/SQL%20f%C3%A1cil.%20Pere%20Chardi%20Garc%C3%ADa.pdf
+
 Funcions MYSQL
 ==============
 Les funcions programades per l'usuari es comporten igual que les funcions natives dels SGBD. Poden veure's d'igual manera com a caixes negres a les quals se'ls pot passar de zero a diversos paràmetres d'entrada, i retornen un únic valor de sortida. Per a il·lustrar com programar una funció senzilla, considerarem que necessitem unificar en una tercera columna, dues columnes numèriques que retorna una consulta SQL, de manera que la nova columna contingui el valor major d'entre les altres dues columnes. La funció ha de ser genèrica, és a dir, per a dos valors donats ha de determinar el major i retornar-ho com a resultat de l'operació.
