@@ -61,7 +61,17 @@ al meu servidor. Per tant, sabreu si em funcionarà o no, si executant-lo vosalt
 vostre servidor funciona o no.
 
 # Activitat 2: Treballadors amb fills.
-# Activitat 3: Activitats de procediments emmagatzemats 
+
+
+# Activitat 3: Activitats de procediments emmagatzemats
+
+[MP02_UF03_Act_03_Procediments_Funcions_MySQL.pdf](./documents/MP02_UF03_Act_03_Procediments_Funcions_MySQL.pdf)
+
+&nbsp;&nbsp;**1.** Dissenya un procediment que rebi un codi de pel·lícula i mostri per pantalla el nom de la pel·lícula i els actors/actrius que hi actuen, juntament amb el paper que interpreten.
+
+[PardoJoan_Act_03_ProcEmm_MySQL_Apartat_001.sql](./procEmm/PardoJoan_Act_03_ProcEmm_MySQL_Apartat_001.sql)
+
+
 # Activitat 4: Activitats de SP amb cursors
 
 
