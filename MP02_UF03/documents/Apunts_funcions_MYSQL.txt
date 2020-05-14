@@ -1,0 +1,220 @@
+Funcions MYSQL
+==============
+Las funciones programadas por el usuario se comportan igual que las funciones nativas de los SGBD. Pueden verse de igual modo como cajas negras a las que se les puede pasar de cero a varios parámetros de entrada, y devuelven un único valor de salida. Para ilustrar cómo programar una función sencilla, vamos a considerar que necesitamos unificar en una tercera columna, dos columnas numéricas que retorna una consulta SQL, de modo que la nueva columna contenga el valor mayor de entre las otras dos columnas. La función tiene que ser genérica, es decir, para dos valores dados debe determinar el mayor y retornarlo como resultado de la operación.
+Al construir la función se han usado mayúsculas para diferenciar los nombres que elige el programador de las instrucciones y por tanto palabras reservadas del lenguaje. 
+******************************
+Código 27.1
+create function MAYOR (P_VALOR_1 int, P_VALOR_2 int) returns int
+begin
+ declare V_RETORNO int;
+ if P_VALOR_1 > P_VALOR_2 then
+set V_RETORNO = P_VALOR_1;
+ else
+set V_RETORNO = P_VALOR_2;
+ end if;
+ return V_RETORNO;
+end; 
+******************************
+Analizando las partes del código de la anterior función observamos que el programador la ha llamado MAYOR. P_VALOR_1 y P_VALOR_2 son los dos parámetros de entrada, para los cuales debe especificarse el tipo de dato, en este caso ambos son de tipo INT. Vemos también en la cabecera de la función cómo se especifica el tipo de dato que retorna, en este caso tipo INT. Por tanto la función MAYOR recibe dos enteros como parámetros de entrada, y retorna un entero como resultado de la operación o valor de salida.
+A continuación viene el bloque de código entre las palabras reservadas BEGIN y END, en este espacio se programa la lógica que ha de realizar la función. La primera instrucción que aparece es una declaración de variable: V_RETORNO, para la cual debe también especificarse el tipo de dato, en este caso también tipo INT. La variable tiene el propósito de guardar el valor que la función acabará retornando.
+Seguidamente encontramos la instrucción IF, que permite establecer condiciones.
+En función del resultado de la condición, que solo puede ser cierto o falso, se realizan unas acciones u otras. En este caso se observa como la instrucción IF compara los parámetros de entrada entre sí de modo que si P_VALOR_1 es mayor que P_VALOR_2, entonces se ejecuta la instrucción SET que hay dentro del IF, es decir, se asigna el valor que contiene P_VALOR_1 a la variable V_RETORNO. Si por el contrario la condición resulta ser falsa, en lugar de ejecutarse la instrucción que hay dentro del IF se ejecutará la que hay dentro del ELSE, y se asignará el valor que contiene P_VALOR_2 a la variable V_RETORNO.
+Al final de todo está la instrucción RETURN que retorna el contenido de la variable V_RETORNO previamente calculado y finaliza la ejecución de la función.
+Veamos a continuación una aplicación de la función MAYOR. 
+******************************
+Código 27.2
+select MAYOR(34, 27) 
+******************************
+MAYOR(34, 27)
+34
+******************************
+Aplicado a dos columnas de una consulta:
+******************************
+Código 27.3
+select ID_ALUMNO,
+ID_CURSO,
+MAYOR(ID_ALUMNO, ID_CURSO) as MAYOR
+ from ALUMNOS_CURSOS 
+******************************
+ID_ALUMNO ID_CURSO MAYOR
+1 1 1
+3 1 3
+5 1 5
+4 2 4
+1 3 3
+5 3 5
+2 4 4
+6 4 6
+******************************
+FUNCIÓN CON ACCESO A DATOS 
+******************************
+La siguiente función de ejemplo MySQL calcula la suma de salarios de la tabla EMPLEADOS, tiene un parámetro de entrada para indicarle el sexo de los empleados que se deben considerar para el cálculo, pero si no se especifica el sexo, o lo que es lo mismo, la invocamos pasándole un valor nulo, calcula la suma de salarios de toda la tabla. 
+******************************
+Código 27.5
+create function SUMA_SALARIOS (P_SEXO char(1))
+returns float
+begin
+ declare V_SUMA float;
+ select sum(SALARIO)
+ into V_SUMA 
+ from EMPLEADOS
+ where SEXO = P_SEXO
+or P_SEXO is null;
+ return V_SUMA;
+end; 
+******************************
+Fíjese como en la consulta que contiene la función aparece una cláusula que no se había tratado con anterioridad en el libro, la cláusula INTO. Esta cláusula solo tiene sentido en las consultas que se usan dentro de un bloque de código. Tiene el propósito de asignar los valores que devuelve la consulta a variables para su tratamiento o uso. En este caso la suma de salarios que devuelve la consulta se asigna a la variable V_SUMA, que se usa como valor de retorno de la función. Si en la cláusula SELECT aparecen más columnas o campos, deberá especificar en la cláusula INTO una variable para cada columna que indique en la cláusula SELECT, separando una variable de otra por comas. Estas variables deben ser del mismo tipo que el valor que devuelve la consulta en su columna correspondiente. Si intuitivamente usted presiente que para estas consultas se espera que devuelvan una sola fila de resultado, está en lo cierto, si devuelven dos o más se produce un error en tiempo de ejecución, dado que no es posible asignar a una variable los valores de varias filas de resultado.
+Probemos el buen funcionamiento de la función SUMA_SALARIOS mediante la siguiente consulta: 
+******************************
+Código 27.6
+select 'Hombres' as AMBITO,
+SUMA_SALARIOS('H') as TOTAL_SALARIOS
+ union
+select 'Mujeres', SUMA_SALARIOS('M')
+ union
+select 'Todos', SUMA_SALARIOS(null) 
+******************************
+AMBITO TOTAL_SALARIOS
+Hombres 2900
+Mujeres 2625.5
+Todos 5525.5
+******************************
+Si usted recuerda el ejercicio que plantea el cálculo del porcentaje que cobra cada empleado sobre el total de salarios, tendrá presente que se resolvió de dos modos: con una subconsulta en la cláusula SELECT, y con una subconsulta en la cláusula FROM.
+Se expone en esta ocasión una solución basada en la llamada a la función SUMA_SALARIOS. 
+******************************
+Código 27.7
+select NOMBRE,
+APELLIDOS,
+SALARIO / suma_salarios(null) * 100 as PORCENTAJE
+ from EMPLEADOS 
+******************************
+Otro problema que se planteó era el mismo cálculo pero considerando la suma de salario de las mujeres si el empleado es mujer, y la suma de salarios de los hombres si el empleado es hombre. La siguiente consulta resuelve este cálculo haciendo uso de la función SUMA_SALARIOS. 
+******************************
+Código 27.8
+select NOMBRE,
+APELLIDOS,
+SALARIO / suma_salarios(SEXO) * 100 as PORCENTAJE
+ from EMPLEADOS 
+******************************
+ANÁLISIS DESCENDIENTE
+Los procedimientos y funciones resultan de gran ayuda para organizar el código.
+Por ejemplo, usted puede necesitar programar un procedimiento que realice una tarea tal que requiera de cientos de líneas de código. Es aconsejable dividir el problema en apartados más pequeños, es decir, en subtareas que programará en diversos procedimientos y funciones para después desde un procedimiento o función principal ir invocando cada uno ellos en el orden adecuado, teniendo así el algoritmo que resuelve su problema mejor organizado. De este modo usted tendrá un código más ordenado y le resultará más cómodo su mantenimiento.
+El análisis descendiente es un estudio previo a la programación que divide en tareas más pequeñas el algoritmo en su conjunto. Una vez dividido el problema se realiza la programación de cada una de estas partes. Por último se programa el procedimiento o función principal que usará cada una de estas partes previamente programadas.
+Veamos un símil de análisis descendiente en el mundo culinario: cocinar un pastel.
+Se trata de una tarea que podemos dividir en varias subtareas: 
+1. Preparar molde
+2. Preparar ingredientes
+3. Mezclar ingredientes
+4. Elaborar masa
+5. Llenar molde
+6. Hornear molde
+Cada una de estas subtareas se invocaría desde el procedimiento principal, que programaremos en pseudocódigo, del siguiente modo. 
+******************************
+VIDEOJUEGO
+Realicemos ahora en MySQL un ejemplo de análisis descendiente considerando el siguiente videojuego: acertar el número secreto. Para ello vamos a suponer que enemos una tabla JUEGO, con cinco campos: ID_JUEGO, JUGADOR, NUMERO, INTENTOS y FINALIZADO, esta tabla contiene por ID_JUEGO un registro con el número secreto en el campo NUMERO y los intentos de acertarlo se van almacenando en el campo INTENTOS. El número secreto es un entero comprendido entre 0 y 999. Cada vez que el jugador aventure un número como solución, el juego debe responder si el número secreto es mayor al propuesto o bien es menor. En el caso de que el número propuesto sea igual al número secreto el juego acaba y se muestra el número de intentos que ha necesitado el jugador para acertarlo, además se actualizará el campo FINALIZADO del juego en curso.
+Dividamos el problema en subtareas.
+1. Obtener juego (determina el juego en curso para un jugador, si no lo hay crea una nueva partida)
+2. Obtener número secreto (obtiene el número secreto del juego en curso)
+3. Incrementar intento (actualiza el número de intentos del juego en curso y devuelve los intentos realizados hasta el momento)
+4. Finalizar juego (actualiza el campo FINALIZADO del juego en curso)
+Empecemos a programar cada una de estas subtareas: 
+
+******************************
+Código 27.13
+create function OBTENER_JUEGO(P_JUGADOR char(30))
+returns int
+begin
+ declare V_JUEGO int;
+ -- si no existe registro a V_JUEGO se le asigna nulo.
+ select ID_JUEGO
+ into V_JUEGO
+ from JUEGO
+ where JUGADOR = P_JUGADOR
+and FINALIZADO = 'N';
+ if V_JUEGO is null then
+insert into JUEGO(JUGADOR, NUMERO)
+values (P_JUGADOR, round ( rand() * 999 ));
+select last_insert_id()
+into V_JUEGO; 
+******************************
+Para generar números aleatorios se usa la función RAND. Observe también como en el INSERT no se especifican todos los valores para todos los campos de la tabla JUEGO. Esto es debido a que se han definido valores por defecto al construir la tabla para los campos INTENTOS y FINALIZADO, que se inserta un cero y una ‘N’ respectivamente. Además el campo ID_JUEGO se ha definido como AUTO_INCREMENT, esto es una particularidad de MySQL que de forma automática encuentra valores para el campo ID_JUEGO que es clave primaria y los asigna para cada inserción. El modo de saber qué identificador ha asignado al nuevo registro es mediante la función LAST_INSERT_ID. 
+******************************
+Código 27.14
+create function OBTENER_NUMERO(P_JUEGO int) returns int
+begin
+ declare V_NUMERO int;
+ select NUMERO
+ into V_NUMERO
+ from JUEGO
+ where ID_JUEGO = P_JUEGO;
+ return V_NUMERO;
+end; 
+******************************
+Código 27.15
+create function INCREMENTAR_INTENTOS(P_JUEGO int) returns int
+begin
+ declare V_INTENTOS int;
+ update JUEGO
+set INTENTOS = INTENTOS + 1
+ where ID_JUEGO = P_JUEGO;
+ select INTENTOS
+ into V_INTENTOS
+ from JUEGO
+ where ID_JUEGO = P_JUEGO;
+ return V_INTENTOS;
+end; 
+******************************
+Código 27.16
+create procedure FINALIZAR_JUEGO(P_JUEGO int)
+begin
+ update JUEGO
+set FINALIZADO = 'S'
+ where ID_JUEGO = P_JUEGO;
+end; 
+******************************
+Ahora una vez programadas todas las partes vamos a programar la función principal usando cada una de ellas para programar el videojuego. Necesitamos pasarle a esta función principal dos parámetros: el jugador, que es un nombre cualquiera que fijaremos al empezar una partida, y el número que aventuramos como solución. Para próximos intentos del mismo juego deberemos pasarle el mismo nombre de jugador, de lo contrario el algoritmo abrirá un nuevo juego.
+******************************
+Código 27.17
+create function NUMERO_SECRETO(P_JUGADOR char(30),
+P_NUMERO int)
+returns char(200)
+begin
+ declare V_JUEGO int;
+ declare V_NUMERO int;
+ declare V_INTENTOS int;
+ declare V_RETORNO char(200);
+ -- control de parametros de entrada
+ if P_JUGADOR is null then
+return 'Debe indicar un nombre de jugador';
+ elseif not (P_NUMERO >= 0 and P_NUMERO < 1000)
+or P_NUMERO is null then
+return 'Debe indicar un numero entre 0 y 999';
+ end if;
+ set V_JUEGO = OBTENER_JUEGO(P_JUGADOR);
+ set V_NUMERO = OBTENER_NUMERO(V_JUEGO);
+ set V_INTENTOS = INCREMENTAR_INTENTOS(V_JUEGO);
+ if V_NUMERO = P_NUMERO then
+call FINALIZAR_JUEGO(V_JUEGO);
+set V_RETORNO = concat('Correcto, ha necesitado ',
+V_INTENTOS, ' intentos');
+ else
+if V_NUMERO < P_NUMERO then
+set V_RETORNO = 'El número secreto es menor que';
+elseif V_NUMERO > P_NUMERO then
+set V_RETORNO = 'El número secreto es mayor que';
+end if;
+set V_RETORNO = concat(V_RETORNO, ' ', P_NUMERO, 
+'. Intentos: ', V_INTENTOS);
+ end if;
+ return V_RETORNO;
+end; 
+******************************
+Y ahora vamos a jugar: 
+******************************
+Código 27.18
+select NUMERO_SECRETO('test', 500) 
+******************************
+
+******************************
+******************************
+******************************
