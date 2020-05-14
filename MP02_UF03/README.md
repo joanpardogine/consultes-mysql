@@ -4,8 +4,6 @@
 
 &nbsp;&nbsp;**1.** Crea un usuari nou amb el teu **`cognomnom`** en el servidor local.
 
-[PardoJoan_Act_03_ProcEmm_MySQL_Apartat_001.sql](./procEmm/PardoJoan_Act_03_ProcEmm_MySQL_Apartat_001.sql)
-
 &nbsp;&nbsp;**2.** Proporciona els permisos per la BD **`videoclub`** al nou usuari:
 
 &nbsp;&nbsp;&nbsp;&nbsp;**a.** Llistar dades.
@@ -17,8 +15,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;**d.** Esborrar dades.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**e.** Executar funcions.
-
-[PardoJoan_Act_03_ProcEmm_MySQL_Apartat_002.sql](./procEmm/PardoJoan_Act_03_ProcEmm_MySQL_Apartat_002.sql)
 
 &nbsp;&nbsp;**3.** Aplica els privilegis.
 
