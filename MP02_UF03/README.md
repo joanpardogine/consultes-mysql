@@ -1,18 +1,8 @@
 # Activitat 1: Usuaris i privilegis en MySQL.
 
-```diff
-+ **`cognomnom`**
-```
-
-
-
 [MP02_UF03_Act_01_UsuPri_MySQL.pdf](./documents/MP02_UF03_Act_01_UsuPri_MySQL.pdf)
 
-&nbsp;&nbsp;**1.** Crea un usuari nou amb el teu 
-```diff
-+ **`cognomnom`**
-```
- en el servidor local.
+&nbsp;&nbsp;**1.** Crea un usuari nou amb el teu **`cognomnom`** en el servidor local.
 
 &nbsp;&nbsp;**2.** Proporciona els permisos per la BD **`videoclub`** al nou usuari:
 
