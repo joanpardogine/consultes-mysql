@@ -3,7 +3,6 @@
 <details>
   <summary> fes click per expandir.</summary>
 
-
 [MP02_UF03_Act_01_UsuPri_MySQL.pdf](./documents/MP02_UF03_Act_01_UsuPri_MySQL.pdf)
 
 &nbsp;&nbsp;**1.** Crea un usuari nou amb el teu **`cognomnom`** en el servidor local.
@@ -64,7 +63,7 @@ conté la solució a l'**`apartart 1`** serà:
 al meu servidor. Per tant, sabreu si em funcionarà o no, si executant-lo vosaltres en el
 vostre servidor funciona o no.
 
-<details>
+</details>
 
 # Activitat 2: Treballadors amb fills.
 <details>
@@ -85,8 +84,10 @@ vostre servidor funciona o no.
 </details>
 
 # Activitat 4: Activitats de SP amb cursors
+
 <details>
   <summary> fes click per expandir.</summary>
+  
 </details>
 
 # Enunciats per practicar amb els `INSERT`'s
