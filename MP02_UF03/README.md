@@ -1,5 +1,9 @@
 # Activitat 1: Usuaris i privilegis en MySQL.
 
+<details>
+  <summary> fes click per expandir.</summary>
+
+
 [MP02_UF03_Act_01_UsuPri_MySQL.pdf](./documents/MP02_UF03_Act_01_UsuPri_MySQL.pdf)
 
 &nbsp;&nbsp;**1.** Crea un usuari nou amb el teu **`cognomnom`** en el servidor local.
@@ -60,22 +64,36 @@ conté la solució a l'**`apartart 1`** serà:
 al meu servidor. Per tant, sabreu si em funcionarà o no, si executant-lo vosaltres en el
 vostre servidor funciona o no.
 
-# Activitat 2: Treballadors amb fills.
+<details>
 
+# Activitat 2: Treballadors amb fills.
+<details>
+  <summary> fes click per expandir.</summary>
+</details>
+  
 
 # Activitat 3: Activitats de procediments emmagatzemats
+
+<details>
+  <summary> fes click per expandir.</summary>
 
 [MP02_UF03_Act_03_Procediments_Funcions_MySQL.pdf](./documents/MP02_UF03_Act_03_Procediments_Funcions_MySQL.pdf)
 
 &nbsp;&nbsp;**1.** Dissenya un procediment que rebi un codi de pel·lícula i mostri per pantalla el nom de la pel·lícula i els actors/actrius que hi actuen, juntament amb el paper que interpreten.
 
 [PardoJoan_Act_03_ProcEmm_MySQL_Apartat_001.sql](./procEmm/PardoJoan_Act_03_ProcEmm_MySQL_Apartat_001.sql)
-
+</details>
 
 # Activitat 4: Activitats de SP amb cursors
-
+<details>
+  <summary> fes click per expandir.</summary>
+</details>
 
 # Enunciats per practicar amb els `INSERT`'s
+
+<details>
+  <summary> fes click per expandir.</summary>
+
 ![MER_Videoclub](./imatges/MER_Videoclub.png)
 
 
@@ -97,3 +115,4 @@ Insertis, com a mínim **tres** registres, a **totes** i cadascuna de les **taul
 +---------------------+
 ~~~~
 La informació de cada pel·lícula cal que la obtingeu de la web [IMDb.com](https://www.imdb.com/). ![logoIMDb](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/245px-IMDB_Logo_2016.svg.png)
+</details>
