@@ -9,7 +9,7 @@
   
 ### Solucions
 - [x] [f_Act_05_Apartat_001.sql](exercicis/f_Act_05_Apartat_001.sql)
-- [ ] [f_Act_05_Apartat_002.sql](exercicis/f_Act_05_Apartat_002.sql)
+- [x] [sp_Act_05_Apartat_002.sql](exercicis/sp_Act_05_Apartat_002.sql)
 - [ ] [f_Act_05_Apartat_003.sql](exercicis/f_Act_05_Apartat_003.sql)
 - [x] [f_Act_05_Apartat_003b.sql](exercicis/f_Act_05_Apartat_003b.sql)
 
