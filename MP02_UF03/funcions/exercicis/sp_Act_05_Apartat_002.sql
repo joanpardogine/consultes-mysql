@@ -1,14 +1,15 @@
 /*
-2. Utilitza la funció creada a l'apartat 1, per llistar el títol de la
-pel·lícula i la quantitat de socis que l'han vist, en un procediment
-emmagatzemat.
+2. Crea un procediment emmagatzemat, per llistar el títol de la pel·lícula
+i la quantitat de socis que l'han vist, fent servir la funció creada a l'apartat 1,
+per obtenir la quantitat de socis que l'han vist.
+
  (PELLICULES.titol_peli      | varchar(50)
  
 Nom:            sp_Act_05_Apartat_002.sql
 Faré servir:    f_Act_05_Apartat_001(id_peli);
 
-Input:      pi_codi_peli     smallint  
-Return:     ret_TitolPeli    varchar(50)
+Input:          pi_codi_peli     smallint  
+
 
 mysql> select f_Act_05_Apartat_001(1);
 +-------------------------+
@@ -18,7 +19,6 @@ mysql> select f_Act_05_Apartat_001(1);
 +-------------------------+
 
 */
-
 
 /* Modifiquem el delimitador de sentències a // */
 DELIMITER //
