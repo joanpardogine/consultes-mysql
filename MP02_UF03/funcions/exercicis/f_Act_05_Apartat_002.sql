@@ -1,7 +1,23 @@
 /*
-Dissenya una funció que torni el codi de la pel·lícula que més ha recaptat.
+2. Utilitza aquesta funció per llistar el títol de la pel·lícula i
+la quntitat de socis que l'han vist.
+ (PELLICULES.titol_peli      | varchar(50)
+ 
+Nom:            f_Act_05_Apartat_002.sql
+Faré servir:    f_Act_05_Apartat_001(id_peli);
+
+Input:      pi_codi_peli     smallint  
+Return:     ret_TitolPeli    varchar(50)
+
+mysql> select f_Act_05_Apartat_001(1);
++-------------------------+
+| f_Act_05_Apartat_001(1) |
++-------------------------+
+|                       4 |
++-------------------------+
 
 */
+
 
 /* Modifiquem el delimitador de sentències a // */
 DELIMITER //
@@ -14,55 +30,51 @@ USE videoclub//
 ** crear per assegurar-nos que el creem des de zero. */
 DROP FUNCTION IF EXISTS f_Act_05_Apartat_002//
 
-CREATE FUNCTION f_Act_05_Apartat_002()
-        RETURNS smallint
+CREATE FUNCTION f_Act_05_Apartat_002(pi_codi_peli smallint)
+        RETURNS varchar(150)
 
 -- La clàusula BEGIN indica l'inici del procediment.
   BEGIN
   
-    DECLARE ret_codipeli_maxRecaptacio smallint;
+    DECLARE pa_cadenaTitol   varchar(50);
+    DECLARE pa_QtatUSuaris   int;
     
--- A partir d'aquí desenvolupem el procediment en si.
---     DECLARE pl_maxRecaptacio bigint;
-
-    SELECT id_peli   
-      INTO ret_codipeli_maxRecaptacio
-    FROM PELLICULES
-    ORDER BY recaudacio_peli DESC
-    LIMIT 1;
+    DECLARE ret_cadenaTitolPeliIQtatUSuaris    varchar(150);
     
-/*
-
-SELECT id_peli FROM PELLICULES ORDER BY recaudacio_peli DESC LIMIT 1;
-
-SELECT max(recaudacio_peli)
-      INTO pl_maxRecaptacio
-    FROM PELLICULES;
-
-    SELECT id_peli
-      INTO ret_codipeli_maxRecaptacio
+    SELECT titol_peli
+        INTO pa_cadenaTitol
     FROM PELLICULES
-    WHERE recaudacio_peli = pl_maxRecaptacio;
-*/
+    WHERE id_peli=pi_codi_peli;
+    
+    SELECT f_Act_05_Apartat_001(pi_codi_peli)
+        INTO pa_QtatUSuaris;
+    
+    SET ret_cadenaTitolPeliIQtatUSuaris = concat_ws (" ", 
+            "La pelicula",
+            pa_cadenaTitol,
+            "l'han vist",
+            pa_QtatUSuaris,
+            "socis.");
+    
+    -- "La pelicula La busqueda l'han vist 4 socis."
 
-    RETURN (ret_codipeli_maxRecaptacio);
 
+     RETURN (ret_cadenaTitolPeliIQtatUSuaris);
+     
 -- La clàusula END indica el final del procediment.
   END //
 
-
-
--- Modifiquem el delimitador de sentències a l'estàndard que és ;
+-- Tornem el delimitador de sentències a l'estàndard que és ;
 DELIMITER ;
 
-/*
-mysql> SELECT f_Act_05_Apartat_002();
-+------------------------+
-| f_Act_05_Apartat_002() |
-+------------------------+
-|                      8 |
-+------------------------+
+/*  f_Act_05_Apartat_002();
+
+mysql> select f_Act_05_Apartat_002(1);
++---------------------------------------------+
+| f_Act_05_Apartat_002(1)                     |
++---------------------------------------------+
+| La pelicula La busqueda l'han vist 4 socis. |
++---------------------------------------------+
 
 */
-
 
