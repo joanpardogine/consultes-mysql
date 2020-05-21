@@ -1,4 +1,9 @@
-* Modifiquem el delimitador de sentències a // */
+/*
+3. Dissenya una funció que rebi el codi d’una pel·lícula i torni el nom i cognoms del seu actor principal.
+*/
+
+
+/* Modifiquem el delimitador de sentències a // */
 DELIMITER //
 
 /* Canviem a la base de dades empresa per
@@ -7,9 +12,9 @@ USE videoclub//
 
 /* Procedim a esborrar el procediment que volem
 ** crear per assegurar-nos que el creem des de zero. */
-DROP FUNCTION IF EXISTS f_Act_05_Apartat_001//
+DROP FUNCTION IF EXISTS f_Act_05_Apartat_003//
 
-CREATE FUNCTION f_Act_05_Apartat_001(pe_codi smallint)
+CREATE FUNCTION f_Act_05_Apartat_003(pe_codi smallint)
         RETURNS varchar(120)
 
 -- La clàusula BEGIN indica l'inici del procediment.
@@ -49,17 +54,17 @@ CREATE FUNCTION f_Act_05_Apartat_001(pe_codi smallint)
 -- Tornem el delimitador de sentències a l'estàndard que és ;
 DELIMITER ;
 
-/*  f_Act_05_Apartat_001();
-mysql> select f_Act_05_Apartat_001(1);
+/*  f_Act_05_Apartat_003();
+mysql> select f_Act_05_Apartat_003(1);
 +-------------------------------------------------------------------------+
-| f_Act_05_Apartat_001(1)                                                 |
+| f_Act_05_Apartat_003(1)                                                 |
 +-------------------------------------------------------------------------+
 | A la pelicula La busqueda en Nicolas Cage fa de Benjamin Franklin Gates |
 +-------------------------------------------------------------------------+
 1 row in set (0.00 sec)
-mysql> select f_Act_05_Apartat_001(5);
+mysql> select f_Act_05_Apartat_003(5);
 +------------------------------------------------------------------+
-| f_Act_05_Apartat_001(5)                                          |
+| f_Act_05_Apartat_003(5)                                          |
 +------------------------------------------------------------------+
 | A la pelicula Los 4 fantásticos en Jessica Alba fa de Sue Storm  |
 +------------------------------------------------------------------+
