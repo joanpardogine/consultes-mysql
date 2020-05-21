@@ -29,38 +29,30 @@ USE videoclub//
 
 /* Procedim a esborrar el procediment que volem
 ** crear per assegurar-nos que el creem des de zero. */
-DROP FUNCTION IF EXISTS f_Act_05_Apartat_002//
+DROP PROCEDURE IF EXISTS f_Act_05_Apartat_002//
 
-CREATE FUNCTION f_Act_05_Apartat_002(pi_codi_peli smallint)
-        RETURNS varchar(150)
+CREATE PROCEDURE f_Act_05_Apartat_002(
+        IN pi_codi_peli smallint)
 
 -- La clàusula BEGIN indica l'inici del procediment.
   BEGIN
   
     DECLARE pa_cadenaTitol   varchar(50);
-    DECLARE pa_QtatUSuaris   int;
-    
-    DECLARE ret_cadenaTitolPeliIQtatUSuaris    varchar(150);
-    
+
     SELECT titol_peli
         INTO pa_cadenaTitol
     FROM PELLICULES
     WHERE id_peli=pi_codi_peli;
     
-    SELECT f_Act_05_Apartat_001(pi_codi_peli)
-        INTO pa_QtatUSuaris;
-    
-    SET ret_cadenaTitolPeliIQtatUSuaris = concat_ws (" ", 
+    SELECT concat_ws (" ", 
             "La pelicula",
             pa_cadenaTitol,
             "l'han vist",
-            pa_QtatUSuaris,
-            "socis.");
+            f_Act_05_Apartat_001(pi_codi_peli),
+            "socis.") AS Frase;
     
     -- "La pelicula La busqueda l'han vist 4 socis."
 
-
-     RETURN (ret_cadenaTitolPeliIQtatUSuaris);
      
 -- La clàusula END indica el final del procediment.
   END //
@@ -70,12 +62,13 @@ DELIMITER ;
 
 /*  f_Act_05_Apartat_002();
 
-mysql> select f_Act_05_Apartat_002(1);
+mysql> call f_Act_05_Apartat_002(1);
 +---------------------------------------------+
-| f_Act_05_Apartat_002(1)                     |
+| Frase                                       |
 +---------------------------------------------+
 | La pelicula La busqueda l'han vist 4 socis. |
 +---------------------------------------------+
 
 */
+
 
