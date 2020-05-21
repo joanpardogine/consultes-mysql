@@ -1,6 +1,7 @@
 /*
-2. Utilitza aquesta funció per llistar el títol de la pel·lícula i
-la quntitat de socis que l'han vist.
+2. Utilitza la funció creada a l'apartat 1, per llistar el títol de la
+pel·lícula i la quantitat de socis que l'han vist, en un procediment
+emmagatzemat.
  (PELLICULES.titol_peli      | varchar(50)
  
 Nom:            f_Act_05_Apartat_002.sql
