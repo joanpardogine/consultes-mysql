@@ -4,7 +4,7 @@ pel·lícula i la quantitat de socis que l'han vist, en un procediment
 emmagatzemat.
  (PELLICULES.titol_peli      | varchar(50)
  
-Nom:            f_Act_05_Apartat_002.sql
+Nom:            sp_Act_05_Apartat_002.sql
 Faré servir:    f_Act_05_Apartat_001(id_peli);
 
 Input:      pi_codi_peli     smallint  
@@ -29,9 +29,9 @@ USE videoclub//
 
 /* Procedim a esborrar el procediment que volem
 ** crear per assegurar-nos que el creem des de zero. */
-DROP PROCEDURE IF EXISTS f_Act_05_Apartat_002//
+DROP PROCEDURE IF EXISTS sp_Act_05_Apartat_002//
 
-CREATE PROCEDURE f_Act_05_Apartat_002(
+CREATE PROCEDURE sp_Act_05_Apartat_002(
         IN pi_codi_peli smallint)
 
 -- La clàusula BEGIN indica l'inici del procediment.
@@ -60,9 +60,9 @@ CREATE PROCEDURE f_Act_05_Apartat_002(
 -- Tornem el delimitador de sentències a l'estàndard que és ;
 DELIMITER ;
 
-/*  f_Act_05_Apartat_002();
+/*  sp_Act_05_Apartat_002();
 
-mysql> call f_Act_05_Apartat_002(1);
+mysql> call sp_Act_05_Apartat_002(1);
 +---------------------------------------------+
 | Frase                                       |
 +---------------------------------------------+
