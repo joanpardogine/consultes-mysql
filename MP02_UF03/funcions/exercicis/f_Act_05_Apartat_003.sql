@@ -2,25 +2,21 @@
 3. Dissenya una funció que rebi el codi d’una pel·lícula i torni el nom i
 cognoms del seu actor principal.
 
- 
 Nom:            f_Act_05_Apartat_003.sql
-
 Input:          pi_codi_peli     smallint 
+Return:         ret_nom_Prota    varchar(30)
 
-id_actor      | smallint
-nom_actor     | varchar(30) 
+ACTORS_PELLICULES.id_actor      | smallint
+ACTORS. nom_actor               | varchar(30) 
 
 pa_codi_Actor   smallint
 ret_nom_Prota    varchar(30) 
-
-Return:     ret_nom_Prota    varchar(30)
 
 SELECT id_actor
 FROM ACTORS_PELLICULES
 WHERE principal = 1 AND
       id_peli=pi_codi_peli
 LIMIT 1;
-
 
 SELECT nom_actor
     INTO ret_nom_Prota
@@ -66,7 +62,6 @@ CREATE FUNCTION f_Act_05_Apartat_003(
     
     RETURN(ret_nom_Prota);
     
-     
 -- La clàusula END indica el final del procediment.
   END //
 
@@ -74,14 +69,12 @@ CREATE FUNCTION f_Act_05_Apartat_003(
 DELIMITER ;
 
 /*  
-
 mysql> SELECT f_Act_05_Apartat_003(8);
 +-------------------------+
 | f_Act_05_Apartat_003(8) |
 +-------------------------+
 | Robert Downey Jr.       |
 +-------------------------+
-
 
 mysql> SELECT id_actor
     -> FROM ACTORS_PELLICULES
@@ -93,7 +86,6 @@ mysql> SELECT id_actor
 |       10 |
 +----------+
 
-
 mysql> SELECT nom_actor
     -> FROM ACTORS
     -> WHERE id_actor=10;
@@ -103,5 +95,3 @@ mysql> SELECT nom_actor
 | Robert Downey Jr. |
 +-------------------+
 */
-
-
