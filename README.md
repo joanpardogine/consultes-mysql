@@ -6,6 +6,6 @@
    > Per obrir a una finestra nova, clica sobre l'enllaça amb el botó dret del ratolí i pitja "**obrir a una nova finestra**")
 1. [MP02_UF03_Act_01_UsuPri_MySQL.pdf](MP02_UF03_Act_01_UsuPri_MySQL.pdf)
    > Per obrir a una finestra nova, clica sobre l'enllaça amb el botó dret del ratolí i pitja "**obrir a una nova finestra**")
-1. [MP02_UF03_Act_01_UsuPri_MySQL.pdf](MP02_UF03_Act_01_UsuPri_MySQL.pdf)
-   > Per obrir a una finestra nova, clica sobre l'enllaça amb el botó dret del ratolí i pitja "**obrir a una nova finestra**")
+
+
 
