@@ -24,32 +24,32 @@
 
 &nbsp;&nbsp;**4.** Mostra els privilegis del nou usuari.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_004.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_004.sql)
 
-&nbsp;&nbsp;**5.** Crea un usuari nou amb el teu **`cognomnom_admin`**.
+&nbsp;&nbsp;**5.** Crea un usuari nou amb el teu **`cognomnom_admin`**.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_005.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_005.sql)
 
 &nbsp;&nbsp;**6.** Proporciona tots els privilegis per la BD **`videoclub`** a l’usuari creat
-en l'**`apartart 5`**.
+en l'**`apartart 5`**.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_006.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_006.sql)
 
-&nbsp;&nbsp;**7.** Esborra el privilegi de crear taules a l’usuari creat en l'**`apartart 5`**.
+&nbsp;&nbsp;**7.** Esborra el privilegi de crear taules a l’usuari creat en l'**`apartart 5`**.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_007.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_007.sql)
 
-&nbsp;&nbsp;**8.** Aplica els privilegis.
+&nbsp;&nbsp;**8.** Aplica els privilegis.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_008.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_008.sql)
 
-&nbsp;&nbsp;**9.** Mostra els privilegis de l’usuari creat en l'**`apartart 5`**.
+&nbsp;&nbsp;**9.** Mostra els privilegis de l’usuari creat en l'**`apartart 5`**.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_009.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_009.sql)
 
-&nbsp;&nbsp;**10.** Surt del MySQL i accedeix amb l’usuari creat en l'**`apartart 1`**.
+&nbsp;&nbsp;**10.** Surt del MySQL i accedeix amb l’usuari creat en l'**`apartart 1`**.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_010.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_010.sql)
 
 &nbsp;&nbsp;**11.** Llista totes les pel·lícules.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**a.** Pots fer-ho?
 
-&nbsp;&nbsp;&nbsp;&nbsp;**b.** En cas negatiu, per què?
+&nbsp;&nbsp;&nbsp;&nbsp;**b.** En cas negatiu, per què?      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_011.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_011.sql)
 
 &nbsp;&nbsp;**12.** Llistat tots els empleats de la BD **`empresa`**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**a.** Pots fer-ho?
 
-&nbsp;&nbsp;&nbsp;&nbsp;**b.** En cas negatiu, per què?
+&nbsp;&nbsp;&nbsp;&nbsp;**b.** En cas negatiu, per què?      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_012.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_012.sql)
 
-&nbsp;&nbsp;**13.** Esborra l’usuari creat en l'**`apartart 5`**.
+&nbsp;&nbsp;**13.** Esborra l’usuari creat en l'**`apartart 5`**.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_013.sql](UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_013.sql)
 
 
 &nbsp;&nbsp;Creeu un fitxer sql amb el resultat de cada apartat. Per exemple, el nom del fitxer que
