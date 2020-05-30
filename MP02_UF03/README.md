@@ -3,7 +3,7 @@
 <details>
   <summary> fes click per expandir.</summary>
 
-[MP02_UF03_Act_01_UsuPri_MySQL.pdf](./documents/MP02_UF03_Act_01_UsuPri_MySQL.pdf)
+[MP02_UF03_Act_01_UsuPri_MySQL.pdf](https://drive.google.com/open?id=1E6k5Jr9fqZdxhvm0vLyH7LPN5QzDuFER)
 
 &nbsp;&nbsp;**1.** Crea un usuari nou amb el teu **`cognomnom`** en el servidor local.
 
