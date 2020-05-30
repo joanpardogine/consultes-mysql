@@ -5,7 +5,7 @@
 
 [MP02_UF03_Act_01_UsuPri_MySQL.pdf](https://drive.google.com/open?id=1E6k5Jr9fqZdxhvm0vLyH7LPN5QzDuFER)
 
-&nbsp;&nbsp;**1.** Crea un usuari nou amb el teu **`cognomnom`** en el servidor local.
+&nbsp;&nbsp;**1.** Crea un usuari nou amb el teu **`cognomnom`** en el servidor local.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_001.sql](MP02_UF03/UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_001.sql)
 
 &nbsp;&nbsp;**2.** Proporciona els permisos per la BD **`videoclub`** al nou usuari:
 
@@ -18,10 +18,11 @@
 &nbsp;&nbsp;&nbsp;&nbsp;**d.** Esborrar dades.
 
 &nbsp;&nbsp;&nbsp;&nbsp;**e.** Executar funcions.
+      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_002.sql](MP02_UF03/UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_002.sql)
 
-&nbsp;&nbsp;**3.** Aplica els privilegis.
+&nbsp;&nbsp;**3.** Aplica els privilegis.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_003.sql](MP02_UF03/UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_003.sql)
 
-&nbsp;&nbsp;**4.** Mostra els privilegis del nou usuari.
+&nbsp;&nbsp;**4.** Mostra els privilegis del nou usuari.      - [PardoJoan_Act_01_UsuPri_MySQL_Apartat_004.sql](MP02_UF03/UsuarisPrivilegis/PardoJoan_Act_01_UsuPri_MySQL_Apartat_004.sql)
 
 &nbsp;&nbsp;**5.** Crea un usuari nou amb el teu **`cognomnom_admin`**.
 
