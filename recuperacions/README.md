@@ -26,4 +26,4 @@ FROM taula_1
     ON taula_1.camp_taula_2 = taula_3.camp_taula_3
 ```
 
-### El lliurament l'hauràs de fer per correu electrònic, enviant un correu electrònic a la meva adreça joanpardo@ginebro.cat, amb un fitxer comprimit, que contingui els fitxers amb la solució a cada apartat, com a fitxer adjunt i a l'assumpte cal que aparegui el següent text [MP02_UF02] amb els claudàtors inclosos.
+### El lliurament l'hauràs de fer per correu electrònic, enviant un correu electrònic a la meva adreça joanpardo@ginebro.cat, amb un fitxer comprimit, que contingui els fitxers amb la solució a cada apartat, com a fitxer adjunt i a l'assumpte cal que aparegui el següent text ```[MP02_UF02]``` amb els claudàtors inclosos.
