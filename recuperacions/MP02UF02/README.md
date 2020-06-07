@@ -2,7 +2,7 @@
 
 La recuperació es basarà a realitzar les següents consultes SQL.
 
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sobre la base de dades **empresa**
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sobre la base de dades ***```empresa```***
 
 1. Retornar el nom i la data d'alta dels treballadors que han estat donat d'alta durant el 2011, fent servir la funció ```year()```
 1. Mostrar el nom i l'ofici, dels treballadors que son Venedors, Analistes o Director.
@@ -12,7 +12,7 @@ La recuperació es basarà a realitzar les següents consultes SQL.
 1. Mostra totes les taules que hi ha a la base de dades.
 1. Mostra la suma del sou de tots els treballadors agrupats per departament.
 
-    #### I sobre la base de dades **videoclub**
+    #### I sobre la base de dades ***```videoclub```***
 1. Fes una cosulta que mostri per pantalla el **nom de la pel·lícula** (***PELLICULES.titol_peli***) els **actors**/**actrius** (***ACTORS.nom_actor***) que hi actuen i el **paper** que interpreten (***ACTORS_PELLICULES.papel***). Es necessari que facis un **```INNER JOIN```** de les taules **PELLICULES**, **ACTORS** i **ACTORS_PELLICULES**.
 
 Recorda la sintaxi:
