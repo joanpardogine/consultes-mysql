@@ -1,20 +1,26 @@
 # Recuperacions MP02: UF02 Llenguatges SQL: DML i DDL
 
-1. La recuperació, serà independent de les activitats que no vareu lliurar.
+La recuperació es basarà a realitzar les següents consultes SQL.
 
-1. Rebeu aquest correu perquè cal que recupereu l'UF2 de base de dades.
+Sobre la base de dades **empresa**:
+1. Retornar el nom i la data d'alta dels treballadors que han estat donat d'alta durant el 2011, fent servir la funció ```year()```
+1. Mostrar el nom i l'ofici, dels treballadors que son Venedors, Analistes o Director.
+1. Mostrar el nom i el sou dels treballadors que tenen el sou més alt i el més baix de tots els sous.
+1. Mostrar el nom dels treballadors que tenen responsable (cap).
+1. Mostrar el nom dels articles que son de tennis. És a dir que tenen la paraula **tennis** a la seva descripció.
+1. Mostra totes les taules que hi ha a la base de dades.
+1. Mostra la suma del sou de tots els treballadors agrupats per departament.
 
-Mètode de recuperació:
-- **```divendres 5 a la tarda```**, us activaré un pou on trobareu l'enunciat dels exercicis/activitats a fer.
-- Tindreu de temps fins el **```dilluns 8 a les 14:30```**
-- **```dilluns 9 a les 16:00```** us enviaré un correu per tal que tothom tingui clar l'hora en el qual em "defensarà" la seva entrega
-Aquesta defensa constarà:
-   1. o d'un seguit de preguntes concretes de resposta ràpida
-   1. o bé, us demanaré que cal modificar del solució que m'heu lliurat, per aconseguir algun canvi que us faci de l'enunciat. Intentaré no allargar més de 15 minuts.
-- **```dimecres 10```** fareu la defensa de l'activitat en l'hora indicada en el correu de **```dilluns```**
+I sobre la base de dades **videoclub**
+1. Fes una cosulta que mostri per pantalla el nom de la pel·lícula (PELLICULES.titol_peli) els actors/actrius (ACTORS.nom_actor) que hi actuen i el paper que interpreten (ACTORS_PELLICULES.papel). Es necessari que facis un INNER JOIN de les taules PELLICULES, ACTORS i ACTORS_PELLICULES.
 
-Com sempre, podeu fer-me arribar tots aquells dubtes o consultes que tingue per correu electrònic.
+Recorda la sintaxi:
 
-No dubteu en posar-vos en contacte amb mi davant de qualsevol consulta/dubte al respecte.
-
-Salutacions,
+```sql
+SELECT *
+FROM taula_1
+  JOIN taula_2
+    ON taula_1.camp_taula_1 = taula_2.camp_taula_2
+  JOIN taula_3
+    ON taula_1.camp_taula_2 = taula_3.camp_taula_3
+```
