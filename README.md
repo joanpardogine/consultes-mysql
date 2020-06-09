@@ -9,4 +9,5 @@
 
 # Recuperacions
 
-
+1. [recuperació MP02 UF02](recuperacio/README.md)
+   > Per obrir a una finestra nova, clica sobre l'enllaça amb el botó dret del ratolí i pitja "**obrir a una nova finestra**")
