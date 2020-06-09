@@ -15,7 +15,7 @@ La recuperació es basarà a realitzar les següents consultes SQL.
     #### I sobre la base de dades ***```videoclub```***
 1. Fes una cosulta que mostri per pantalla el **nom de la pel·lícula** (***```PELLICULES.titol_peli```***) els **actors**/**actrius** (***```ACTORS.nom_actor```***) que hi actuen i el **paper** que interpreten (***```ACTORS_PELLICULES.papel```***). Es necessari que facis un **```INNER JOIN```** de les taules **```PELLICULES```**, **```ACTORS```** i **```ACTORS_PELLICULES```**.
 
-Recorda la sintaxi de la comands '```INNER JOIN```:
+Recorda la sintaxi de la comanda ***```INNER JOIN```***:
 
 ```sql
 SELECT taula_1.camp_taula_x, taula_2.camp_taula_y, taula_3.camp_taula_x, ...
