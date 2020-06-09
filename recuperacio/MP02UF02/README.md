@@ -26,7 +26,7 @@ FROM taula_1
     ON taula_1.camp_taula_2 = taula_3.camp_taula_3
 ```
 
-### Cal que creeu un fitxer sql amb la vostra solució de cada apartat. Recordeu la importància d'afegir comentaris. Per exemple, el nom del fitxer que conté la solució a l'apartat 8 serà: ```CognomNom_Recu_MP02UF02_Apartat_008.sql```.
+### Cal que creeu un fitxer sql amb la vostra solució de cada apartat. Recordeu la importància d'afegir comentaris. Per exemple, el nom del fitxer que conté la solució a l'***apartat 8*** serà: ```CognomNom_Recu_MP02UF02_Apartat_008.sql```.
 #### I el lliurament, serà un fitxer comprimit (zip, o rar) que contindrà tots els fitxers sql de cadascun dels apartats. ```CognomNom_Recu_MP02UF02.zip```.
 #### Recordeu que la correcció la faré pujant el fitxer que m'envieu i executant-lo directament al meu servidor. Per tant, sabreu si em funcionarà o no, si executant-lo vosaltres en el vostre servidor funciona o no.
 
