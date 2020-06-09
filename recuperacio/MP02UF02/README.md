@@ -15,10 +15,10 @@ La recuperació es basarà a realitzar les següents consultes SQL.
     #### I sobre la base de dades ***```videoclub```***
 1. Fes una cosulta que mostri per pantalla el **nom de la pel·lícula** (***PELLICULES.titol_peli***) els **actors**/**actrius** (***ACTORS.nom_actor***) que hi actuen i el **paper** que interpreten (***ACTORS_PELLICULES.papel***). Es necessari que facis un **```INNER JOIN```** de les taules **PELLICULES**, **ACTORS** i **ACTORS_PELLICULES**.
 
-Recorda la sintaxi:
+Recorda la sintaxi de la comands '```INNER JOIN```:
 
 ```sql
-SELECT taula_1.camp_taula_1, taula_2.camp_taula_2, taula_3.camp_taula_3
+SELECT taula_1.camp_taula_x, taula_2.camp_taula_y, taula_3.camp_taula_x, ...
 FROM taula_1
   JOIN taula_2
     ON taula_1.camp_taula_1 = taula_2.camp_taula_2
@@ -30,7 +30,4 @@ FROM taula_1
 #### I el lliurament, serà un fitxer comprimit (zip, o rar) que contindrà tots els fitxers sql de cadascun dels apartats. ```CognomNom_Recu_MP02UF02.zip```.
 #### Recordeu que la correcció la faré pujant el fitxer que m'enviïs i executant-lo directament al meu servidor. Per tant, sabreu si em funcionarà o no, si executant-lo vosaltres en el vostre servidor funciona o no.
 
-### El lliurament l'hauràs de fer per correu electrònic, enviant un correu electrònic a la meva adreça joanpardo@ginebro.cat, amb el fiter comprimit adjunt. IMPORTANt: a l'assumpte (subject) del correu que m'envieu cal que aparegui el següent text [MP02_UF02] amb els claudàtors inclosos.
-
-
-
+### El lliurament l'hauràs de fer per correu electrònic, enviant un correu electrònic a la meva adreça joanpardo@ginebro.cat, amb el fiter comprimit adjunt. IMPORTANT: a l'assumpte (subject) del correu que m'envieu cal que aparegui el següent text [MP02_UF02] amb els claudàtors inclosos.
