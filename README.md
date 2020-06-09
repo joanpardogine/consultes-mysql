@@ -7,7 +7,7 @@
 1. [MP02_UF03_Act_01_UsuPri_MySQL.pdf](MP02_UF03_Act_01_UsuPri_MySQL.pdf)
    > Per obrir a una finestra nova, clica sobre l'enllaça amb el botó dret del ratolí i pitja "**obrir a una nova finestra**")
 
-# Recuperacions
+# Recuperacions Mòdul Professional 2: Bases de dades
 
-1. [recuperació MP02 UF02](recuperacio/README.md)
+1. [Recuperacions Mòdul Professional 2: Bases de dades](recuperacio/README.md)
    > Per obrir a una finestra nova, clica sobre l'enllaça amb el botó dret del ratolí i pitja "**obrir a una nova finestra**")
