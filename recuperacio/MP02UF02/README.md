@@ -13,7 +13,7 @@ La recuperació es basarà a realitzar les següents consultes SQL.
 1. Mostra la suma del sou de tots els treballadors agrupats per departament.
 
     #### I sobre la base de dades ***```videoclub```***
-1. Fes una cosulta que mostri per pantalla el **nom de la pel·lícula** (***PELLICULES.titol_peli***) els **actors**/**actrius** (***ACTORS.nom_actor***) que hi actuen i el **paper** que interpreten (***ACTORS_PELLICULES.papel***). Es necessari que facis un **```INNER JOIN```** de les taules **PELLICULES**, **ACTORS** i **ACTORS_PELLICULES**.
+1. Fes una cosulta que mostri per pantalla el **nom de la pel·lícula** (***```PELLICULES.titol_peli```***) els **actors**/**actrius** (***```ACTORS.nom_actor```***) que hi actuen i el **paper** que interpreten (***```ACTORS_PELLICULES.papel```***). Es necessari que facis un **```INNER JOIN```** de les taules **```PELLICULES```**, **```ACTORS```** i **```ACTORS_PELLICULES```**.
 
 Recorda la sintaxi de la comands '```INNER JOIN```:
 
