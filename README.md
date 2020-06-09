@@ -9,5 +9,5 @@
 
 # Recuperacions Mòdul Professional 2: Bases de dades
 
-1. [Recuperacions Mòdul Professional 2: Bases de dades](recuperacio/README.md)
+1. [Recuperacions Mòdul Professional 2: Bases de dades](recuperacio/MP02UF02/README.md)
    > Per obrir a una finestra nova, clica sobre l'enllaç amb el botó dret del ratolí i pitja "**obrir a una nova finestra**")
