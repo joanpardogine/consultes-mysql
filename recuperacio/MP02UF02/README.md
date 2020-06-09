@@ -1,4 +1,4 @@
-# Recuperacions MP02: UF02 Llenguatges SQL: DML i DDL
+# Recuperació de MP02: UF02 Llenguatges SQL: DML i DDL
 
 La recuperació es basarà a realitzar les següents consultes SQL.
 
