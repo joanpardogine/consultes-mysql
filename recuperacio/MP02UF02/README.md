@@ -30,4 +30,4 @@ FROM taula_1
 #### I el lliurament, serà un fitxer comprimit (zip, o rar) que contindrà tots els fitxers sql de cadascun dels apartats. ```CognomNom_Recu_MP02UF02.zip```.
 #### Recordeu que la correcció la faré pujant el fitxer que m'envieu i executant-lo directament al meu servidor. Per tant, sabreu si em funcionarà o no, si executant-lo vosaltres en el vostre servidor funciona o no.
 
-### El lliurament l'haurue de fer per correu electrònic, enviant un correu electrònic a la meva adreça joanpardo@ginebro.cat, amb el fiter comprimit adjunt. IMPORTANT: a l'assumpte (subject) del correu que m'envieu cal que aparegui el següent text [MP02_UF02] amb els claudàtors inclosos.
+### El lliurament l'haurue de fer per correu electrònic, enviant un correu electrònic a la meva adreça joanpardo@ginebro.cat, amb el fitxer comprimit adjunt. IMPORTANT: a l'assumpte (subject) del correu que m'envieu cal que aparegui el següent text [MP02_UF02] amb els claudàtors inclosos.
