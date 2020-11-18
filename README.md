@@ -1,7 +1,7 @@
 # MP02 Bases de dades
 
 
-[UF01 **Introducció a les bases de dades**](MP02_UF01/README.md)
+[UF01 ***Introducció a les bases de dades***](MP02_UF01/README.md)
 
 [UF02 **Llenguatges SQL: DML i DDL**](MP02_UF02/README.md)
 
