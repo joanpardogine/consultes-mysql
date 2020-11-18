@@ -1,6 +1,6 @@
 # MP02_UF02
 
-[DAW_MP02_005_UF02_Pres_001_Introduccio_A_SQL](https://drive.google.com/file/d/1KCdoG3krCOjGgckMQMA7qA_dslju4Zpv/view?usp=sharing)
+[Introducció a SQL](https://drive.google.com/file/d/1KCdoG3krCOjGgckMQMA7qA_dslju4Zpv/view?usp=sharing)
 
 [Consulta de dades](https://drive.google.com/file/d/1LtNTE2Wlk-fgZPApVLlG3Fp5MV3g2mYS/view?usp=sharing)
 
