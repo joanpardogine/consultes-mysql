@@ -5,7 +5,7 @@
 
 [Consulta de dades (pdf)](https://drive.google.com/file/d/1LtNTE2Wlk-fgZPApVLlG3Fp5MV3g2mYS/view?usp=sharing)
 
-[Condicions en consultes (sql)](https://drive.google.com/file/d/1jY87JQP4SgYZo6sAAs1UZDoPjwgLZ5yF/view?usp=sharing)
+[Condicions en consultes (pdf)](https://drive.google.com/file/d/1jY87JQP4SgYZo6sAAs1UZDoPjwgLZ5yF/view?usp=sharing)
 
 [Afegir registres, esborrar registres, modificar registres (pdf)](https://drive.google.com/file/d/1XcRP6XNF88PG76GLp1616Fq7gkTxclM-/view?usp=sharing)
 
