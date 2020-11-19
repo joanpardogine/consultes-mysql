@@ -11,6 +11,10 @@
 
 [Creació, eliminació i modificació de taule (pdf)s](https://drive.google.com/file/d/1XzjdMPGVAojS_KmeQ_D2bMZQ-Z-3J3ox/view?usp=sharing)
 
-[apunt.sql](https://drive.google.com/file/d/1j9ECAvIeTJyUaWnohoCgWTn8iWX-leIp/view?usp=sharing)
+[apunt1.sql](https://ginebro.clickedu.eu/private/clickedu.ginebro.cat/arxius/assignatures/1365/apunt1.sql
+
+[SintaxiExemplesSQL.txt](https://ginebro.clickedu.eu/private/clickedu.ginebro.cat/arxius/assignatures/1365/SintaxiExemplesSQL.txt)
+
+[Act01_Empresa_BaseDades1](https://ginebro.clickedu.eu/private/clickedu.ginebro.cat/arxius/assignatures/1365/Act01_Empresa_BaseDades1.sql)
 
 [Ordres de MySQL (pdf)](https://drive.google.com/file/d/1y1G9Vwe2JqtWHJfOYYxGhw7l-a5s0pJE/view?usp=sharing)
